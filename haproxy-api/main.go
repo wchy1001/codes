@@ -8,7 +8,9 @@ import (
 
 
 func main(){
-	h := app.Haproxy{}
+	h := app.Haproxy{
+		Lb_name: "wuchunyang",
+	}
 	ws := h.WebService()
 	wsContainer := restful.NewContainer()
 	wsContainer.Add(ws)
